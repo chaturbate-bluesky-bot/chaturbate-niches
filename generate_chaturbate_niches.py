@@ -169,7 +169,7 @@ for i, niche in enumerate(niches):
     with open(f"{folder}/index.html", "w", encoding="utf-8") as file:
         file.write(page_html)
     
-    url = f"https://YOUR-USERNAME.github.io/niches/{slug}/"   # ← you will replace this later
+    url = f"https://chaturbate-bluesky-bot.github.io/niches/{slug}/"   # ← you will replace this later
     sitemap.append(f'  <url><loc>{url}</loc><changefreq>hourly</changefreq><priority>0.8</priority></url>')
     main_links.append(f'<a href="/niches/{slug}/" class="block p-4 bg-zinc-900 hover:bg-pink-900 rounded-xl text-lg">{niche["title"]}</a>')
     
