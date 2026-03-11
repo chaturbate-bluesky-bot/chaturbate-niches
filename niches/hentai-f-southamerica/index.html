@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live HENTAI Female Cams SOUTHAMERICA</title>
+<meta name="description" content="Watch Live HENTAI Female Cams SOUTHAMERICA. Free live cams updated every 90 seconds.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body {{ background:#111; color:#fff; }}
+.card:hover {{ transform:scale(1.05); transition:.3s; }}
+</style>
+</head>
+<body class="min-h-screen p-4">
+
+<div class="max-w-7xl mx-auto">
+<a href="/index.html" class="text-pink-400">← All Niches</a>
+<h1 class="text-4xl font-bold text-center my-6">🔴 LIVE HENTAI Female CAMS</h1>
+<p class="text-center text-pink-400 mb-8">Real-time hentai female cams • Updated every 90 seconds</p>
+<div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+</div>
+
+<div class="max-w-7xl mx-auto mt-12 border-t border-zinc-800 pt-8">
+<h2 class="text-2xl font-bold mb-6 text-center">Explore More Niches</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm"><a href="/niches/hentai-goth-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + GOTH Cams</a><a href="/niches/hentai-bigass-f-northamerica/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + BIGASS Cams</a><a href="/niches/hentai-redhead-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + REDHEAD Cams</a><a href="/niches/hentai-anal-f/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + ANAL Cams</a><a href="/niches/hentai-latina-f/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + LATINA Cams</a><a href="/niches/hentai-m-southamerica/" class="block bg-zinc-900 p-3 rounded">Live HENTAI Male Cams SOUTHAMERICA</a><a href="/niches/hentai-fuckmachine-f-asia/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + FUCKMACHINE Cams</a><a href="/niches/hentai-feet-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + FEET Cams</a><a href="/niches/hentai-blonde-f/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + BLONDE Cams</a><a href="/niches/hentai-c2c-f/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + C2C Cams</a><a href="/niches/hentai-shaved-f-asia/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + SHAVED Cams</a><a href="/niches/hentai-cum-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + CUM Cams</a><a href="/niches/hentai-c2c-f-asia/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + C2C Cams</a><a href="/niches/hentai-asian-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + ASIAN Cams</a><a href="/niches/hentai-asian-f/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + ASIAN Cams</a><a href="/niches/hentai-t-southamerica/" class="block bg-zinc-900 p-3 rounded">Live HENTAI Trans Cams SOUTHAMERICA</a><a href="/niches/hentai-feet-f-northamerica/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + FEET Cams</a><a href="/niches/hentai-t-asia/" class="block bg-zinc-900 p-3 rounded">Live HENTAI Trans Cams ASIA</a><a href="/niches/hentai-c-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live HENTAI Couple Cams EUROPE_RUSSIA</a><a href="/niches/hentai-blonde-f-asia/" class="block bg-zinc-900 p-3 rounded">Live HENTAI + BLONDE Cams</a></div>
+</div>
+
+<script>
+const API = `https://chaturbate.com/api/public/affiliates/onlinerooms/?wm=T2CSW&client_ip=request_ip&format=json&limit=50&gender=f&tag=hentai&region=southamerica&hd=true`;
+
+async function loadRooms() {{
+    const res = await fetch(API);
+    const data = await res.json();
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+    data.results.sort((a,b)=>b.num_users-a.num_users);
+    data.results.forEach(room => {{
+        const card = document.createElement("div");
+        card.className="card bg-zinc-900 rounded-xl overflow-hidden cursor-pointer";
+        card.innerHTML=`
+            <img src="${{room.image_url_360x270}}" class="w-full h-48 object-cover">
+            <div class="p-3">
+                <div class="font-bold text-lg">${{room.username}}</div>
+                <div class="text-xs text-pink-400">${{room.room_subject}}</div>
+                <div class="text-emerald-400 text-sm">${{room.num_users}} watching</div>
+                <button onclick="openRoom('${{room.iframe_embed_revshare}}')" class="mt-3 w-full bg-pink-600 py-2 rounded">WATCH</button>
+            </div>
+        `;
+        grid.appendChild(card);
+    }});
+}}
+
+function openRoom(html) {{
+    const modal = document.createElement("div");
+    modal.innerHTML = html;
+    document.body.appendChild(modal);
+}}
+
+loadRooms();
+setInterval(loadRooms,90000);
+</script>
+</body>
+</html>

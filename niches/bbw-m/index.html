@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live BBW Male Cams</title>
+<meta name="description" content="Watch Live BBW Male Cams. Free live cams updated every 90 seconds.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body {{ background:#111; color:#fff; }}
+.card:hover {{ transform:scale(1.05); transition:.3s; }}
+</style>
+</head>
+<body class="min-h-screen p-4">
+
+<div class="max-w-7xl mx-auto">
+<a href="/index.html" class="text-pink-400">← All Niches</a>
+<h1 class="text-4xl font-bold text-center my-6">🔴 LIVE BBW Male CAMS</h1>
+<p class="text-center text-pink-400 mb-8">Real-time bbw male cams • Updated every 90 seconds</p>
+<div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+</div>
+
+<div class="max-w-7xl mx-auto mt-12 border-t border-zinc-800 pt-8">
+<h2 class="text-2xl font-bold mb-6 text-center">Explore More Niches</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm"><a href="/niches/bbw-c-asia/" class="block bg-zinc-900 p-3 rounded">Live BBW Couple Cams ASIA</a><a href="/niches/bbw-anal-f/" class="block bg-zinc-900 p-3 rounded">Live BBW + ANAL Cams</a><a href="/niches/bbw-cum-f-northamerica/" class="block bg-zinc-900 p-3 rounded">Live BBW + CUM Cams</a><a href="/niches/bbw-lovense-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live BBW + LOVENSE Cams</a><a href="/niches/bbw-bigboobs-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live BBW + BIGBOOBS Cams</a><a href="/niches/bbw-skinny-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live BBW + SKINNY Cams</a><a href="/niches/bbw-shaved-f-asia/" class="block bg-zinc-900 p-3 rounded">Live BBW + SHAVED Cams</a><a href="/niches/bbw-feet-f-northamerica/" class="block bg-zinc-900 p-3 rounded">Live BBW + FEET Cams</a><a href="/niches/bbw-t-northamerica/" class="block bg-zinc-900 p-3 rounded">Live BBW Trans Cams NORTHAMERICA</a><a href="/niches/bbw-shaved-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live BBW + SHAVED Cams</a><a href="/niches/bbw-asian-f-asia/" class="block bg-zinc-900 p-3 rounded">Live BBW + ASIAN Cams</a><a href="/niches/bbw-deepthroat-f/" class="block bg-zinc-900 p-3 rounded">Live BBW + DEEPTHROAT Cams</a><a href="/niches/bbw-curvy-f/" class="block bg-zinc-900 p-3 rounded">Live BBW + CURVY Cams</a><a href="/niches/bbw-milf-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live BBW + MILF Cams</a><a href="/niches/bbw-redhead-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live BBW + REDHEAD Cams</a><a href="/niches/bbw-goth-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live BBW + GOTH Cams</a><a href="/niches/bbw-shaved-f/" class="block bg-zinc-900 p-3 rounded">Live BBW + SHAVED Cams</a><a href="/niches/bbw-squirt-f-asia/" class="block bg-zinc-900 p-3 rounded">Live BBW + SQUIRT Cams</a><a href="/niches/bbw-squirt-f-northamerica/" class="block bg-zinc-900 p-3 rounded">Live BBW + SQUIRT Cams</a><a href="/niches/bbw-t-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live BBW Trans Cams EUROPE_RUSSIA</a></div>
+</div>
+
+<script>
+const API = `https://chaturbate.com/api/public/affiliates/onlinerooms/?wm=T2CSW&client_ip=request_ip&format=json&limit=50&gender=m&tag=bbw&hd=true`;
+
+async function loadRooms() {{
+    const res = await fetch(API);
+    const data = await res.json();
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+    data.results.sort((a,b)=>b.num_users-a.num_users);
+    data.results.forEach(room => {{
+        const card = document.createElement("div");
+        card.className="card bg-zinc-900 rounded-xl overflow-hidden cursor-pointer";
+        card.innerHTML=`
+            <img src="${{room.image_url_360x270}}" class="w-full h-48 object-cover">
+            <div class="p-3">
+                <div class="font-bold text-lg">${{room.username}}</div>
+                <div class="text-xs text-pink-400">${{room.room_subject}}</div>
+                <div class="text-emerald-400 text-sm">${{room.num_users}} watching</div>
+                <button onclick="openRoom('${{room.iframe_embed_revshare}}')" class="mt-3 w-full bg-pink-600 py-2 rounded">WATCH</button>
+            </div>
+        `;
+        grid.appendChild(card);
+    }});
+}}
+
+function openRoom(html) {{
+    const modal = document.createElement("div");
+    modal.innerHTML = html;
+    document.body.appendChild(modal);
+}}
+
+loadRooms();
+setInterval(loadRooms,90000);
+</script>
+</body>
+</html>

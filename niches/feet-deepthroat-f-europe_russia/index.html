@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live FEET + DEEPTHROAT Cams</title>
+<meta name="description" content="Watch Live FEET + DEEPTHROAT Cams. Free live cams updated every 90 seconds.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body {{ background:#111; color:#fff; }}
+.card:hover {{ transform:scale(1.05); transition:.3s; }}
+</style>
+</head>
+<body class="min-h-screen p-4">
+
+<div class="max-w-7xl mx-auto">
+<a href="/index.html" class="text-pink-400">← All Niches</a>
+<h1 class="text-4xl font-bold text-center my-6">🔴 LIVE FEET + DEEPTHROAT CAMS</h1>
+<p class="text-center text-pink-400 mb-8">HD live rooms • Updated every 90 seconds</p>
+<div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+</div>
+
+<div class="max-w-7xl mx-auto mt-12 border-t border-zinc-800 pt-8">
+<h2 class="text-2xl font-bold mb-6 text-center">Explore More Niches</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm"><a href="/niches/feet-t-asia/" class="block bg-zinc-900 p-3 rounded">Live FEET Trans Cams ASIA</a><a href="/niches/feet-skinny-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live FEET + SKINNY Cams</a><a href="/niches/feet-lesbian-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live FEET + LESBIAN Cams</a><a href="/niches/feet-deepthroat-f/" class="block bg-zinc-900 p-3 rounded">Live FEET + DEEPTHROAT Cams</a><a href="/niches/feet-curvy-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live FEET + CURVY Cams</a><a href="/niches/feet-c-asia/" class="block bg-zinc-900 p-3 rounded">Live FEET Couple Cams ASIA</a><a href="/niches/feet-lesbian-f/" class="block bg-zinc-900 p-3 rounded">Live FEET + LESBIAN Cams</a><a href="/niches/feet-f/" class="block bg-zinc-900 p-3 rounded">Live FEET Female Cams</a><a href="/niches/feet-blonde-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live FEET + BLONDE Cams</a><a href="/niches/feet-m-northamerica/" class="block bg-zinc-900 p-3 rounded">Live FEET Male Cams NORTHAMERICA</a><a href="/niches/feet-c/" class="block bg-zinc-900 p-3 rounded">Live FEET Couple Cams</a><a href="/niches/feet-redhead-f-asia/" class="block bg-zinc-900 p-3 rounded">Live FEET + REDHEAD Cams</a><a href="/niches/feet-lovense-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live FEET + LOVENSE Cams</a><a href="/niches/feet-lovense-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live FEET + LOVENSE Cams</a><a href="/niches/feet-skinny-f/" class="block bg-zinc-900 p-3 rounded">Live FEET + SKINNY Cams</a><a href="/niches/feet-skinny-f-northamerica/" class="block bg-zinc-900 p-3 rounded">Live FEET + SKINNY Cams</a><a href="/niches/feet-curvy-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live FEET + CURVY Cams</a><a href="/niches/feet-fuckmachine-f-northamerica/" class="block bg-zinc-900 p-3 rounded">Live FEET + FUCKMACHINE Cams</a><a href="/niches/feet-goth-f/" class="block bg-zinc-900 p-3 rounded">Live FEET + GOTH Cams</a><a href="/niches/feet-deepthroat-f-northamerica/" class="block bg-zinc-900 p-3 rounded">Live FEET + DEEPTHROAT Cams</a></div>
+</div>
+
+<script>
+const API = `https://chaturbate.com/api/public/affiliates/onlinerooms/?wm=T2CSW&client_ip=request_ip&format=json&limit=50&gender=f&tag=feet&tag=deepthroat&region=europe_russia&hd=true`;
+
+async function loadRooms() {{
+    const res = await fetch(API);
+    const data = await res.json();
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+    data.results.sort((a,b)=>b.num_users-a.num_users);
+    data.results.forEach(room => {{
+        const card = document.createElement("div");
+        card.className="card bg-zinc-900 rounded-xl overflow-hidden cursor-pointer";
+        card.innerHTML=`
+            <img src="${{room.image_url_360x270}}" class="w-full h-48 object-cover">
+            <div class="p-3">
+                <div class="font-bold text-lg">${{room.username}}</div>
+                <div class="text-xs text-pink-400">${{room.room_subject}}</div>
+                <div class="text-emerald-400 text-sm">${{room.num_users}} watching</div>
+                <button onclick="openRoom('${{room.iframe_embed_revshare}}')" class="mt-3 w-full bg-pink-600 py-2 rounded">WATCH</button>
+            </div>
+        `;
+        grid.appendChild(card);
+    }});
+}}
+
+function openRoom(html) {{
+    const modal = document.createElement("div");
+    modal.innerHTML = html;
+    document.body.appendChild(modal);
+}}
+
+loadRooms();
+setInterval(loadRooms,90000);
+</script>
+</body>
+</html>

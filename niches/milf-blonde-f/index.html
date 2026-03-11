@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live MILF + BLONDE Cams</title>
+<meta name="description" content="Watch Live MILF + BLONDE Cams. Free live cams updated every 90 seconds.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body {{ background:#111; color:#fff; }}
+.card:hover {{ transform:scale(1.05); transition:.3s; }}
+</style>
+</head>
+<body class="min-h-screen p-4">
+
+<div class="max-w-7xl mx-auto">
+<a href="/index.html" class="text-pink-400">← All Niches</a>
+<h1 class="text-4xl font-bold text-center my-6">🔴 LIVE MILF + BLONDE CAMS</h1>
+<p class="text-center text-pink-400 mb-8">HD live rooms • Updated every 90 seconds</p>
+<div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+</div>
+
+<div class="max-w-7xl mx-auto mt-12 border-t border-zinc-800 pt-8">
+<h2 class="text-2xl font-bold mb-6 text-center">Explore More Niches</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm"><a href="/niches/milf-asian-f-asia/" class="block bg-zinc-900 p-3 rounded">Live MILF + ASIAN Cams</a><a href="/niches/milf-fuckmachine-f-northamerica/" class="block bg-zinc-900 p-3 rounded">Live MILF + FUCKMACHINE Cams</a><a href="/niches/milf-ebony-f/" class="block bg-zinc-900 p-3 rounded">Live MILF + EBONY Cams</a><a href="/niches/milf-mature-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live MILF + MATURE Cams</a><a href="/niches/milf-latina-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live MILF + LATINA Cams</a><a href="/niches/milf-lovense-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live MILF + LOVENSE Cams</a><a href="/niches/milf-lovense-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live MILF + LOVENSE Cams</a><a href="/niches/milf-t-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live MILF Trans Cams EUROPE_RUSSIA</a><a href="/niches/milf-blonde-f-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live MILF + BLONDE Cams</a><a href="/niches/milf-anal-f/" class="block bg-zinc-900 p-3 rounded">Live MILF + ANAL Cams</a><a href="/niches/milf-curvy-f-asia/" class="block bg-zinc-900 p-3 rounded">Live MILF + CURVY Cams</a><a href="/niches/milf-latina-f-asia/" class="block bg-zinc-900 p-3 rounded">Live MILF + LATINA Cams</a><a href="/niches/milf-c2c-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live MILF + C2C Cams</a><a href="/niches/milf-bigboobs-f-asia/" class="block bg-zinc-900 p-3 rounded">Live MILF + BIGBOOBS Cams</a><a href="/niches/milf-skinny-f-southamerica/" class="block bg-zinc-900 p-3 rounded">Live MILF + SKINNY Cams</a><a href="/niches/milf-petite-f-asia/" class="block bg-zinc-900 p-3 rounded">Live MILF + PETITE Cams</a><a href="/niches/milf-c-northamerica/" class="block bg-zinc-900 p-3 rounded">Live MILF Couple Cams NORTHAMERICA</a><a href="/niches/milf-c-europe_russia/" class="block bg-zinc-900 p-3 rounded">Live MILF Couple Cams EUROPE_RUSSIA</a><a href="/niches/milf-shaved-f-asia/" class="block bg-zinc-900 p-3 rounded">Live MILF + SHAVED Cams</a><a href="/niches/milf-lesbian-f/" class="block bg-zinc-900 p-3 rounded">Live MILF + LESBIAN Cams</a></div>
+</div>
+
+<script>
+const API = `https://chaturbate.com/api/public/affiliates/onlinerooms/?wm=T2CSW&client_ip=request_ip&format=json&limit=50&gender=f&tag=milf&tag=blonde&hd=true`;
+
+async function loadRooms() {{
+    const res = await fetch(API);
+    const data = await res.json();
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+    data.results.sort((a,b)=>b.num_users-a.num_users);
+    data.results.forEach(room => {{
+        const card = document.createElement("div");
+        card.className="card bg-zinc-900 rounded-xl overflow-hidden cursor-pointer";
+        card.innerHTML=`
+            <img src="${{room.image_url_360x270}}" class="w-full h-48 object-cover">
+            <div class="p-3">
+                <div class="font-bold text-lg">${{room.username}}</div>
+                <div class="text-xs text-pink-400">${{room.room_subject}}</div>
+                <div class="text-emerald-400 text-sm">${{room.num_users}} watching</div>
+                <button onclick="openRoom('${{room.iframe_embed_revshare}}')" class="mt-3 w-full bg-pink-600 py-2 rounded">WATCH</button>
+            </div>
+        `;
+        grid.appendChild(card);
+    }});
+}}
+
+function openRoom(html) {{
+    const modal = document.createElement("div");
+    modal.innerHTML = html;
+    document.body.appendChild(modal);
+}}
+
+loadRooms();
+setInterval(loadRooms,90000);
+</script>
+</body>
+</html>
